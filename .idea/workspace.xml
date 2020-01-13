@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00866b89-e169-4cff-99c1-5efdc91fc0bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/user/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/headNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/headNav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/webpack.prod.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/webpack.prod.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +100,7 @@
       <workItem from="1578812105369" duration="2606000" />
       <workItem from="1578827560164" duration="4224000" />
       <workItem from="1578877357831" duration="143000" />
-      <workItem from="1578877520598" duration="4479000" />
+      <workItem from="1578877520598" duration="7132000" />
     </task>
     <task id="LOCAL-00001" summary="提交vue code">
       <created>1578828186955</created>
@@ -113,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578828186955</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="实现登录 路由 拦截">
+      <created>1578882077079</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578882077079</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +124,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="提交vue code" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交vue code" />
+    <MESSAGE value="实现登录 路由 拦截" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现登录 路由 拦截" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578556267463">
@@ -132,10 +136,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="506" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1578626596570" />
-    <state x="385" y="7" key="CommitChangelistDialog2" timestamp="1578828068570">
+    <state x="385" y="7" key="CommitChangelistDialog2" timestamp="1578882075715">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="385" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578828068570" />
+    <state x="385" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578882075715" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1578878172760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -160,21 +164,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="266" y="83" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578720533184" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1578828220334">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1578882083053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578828220334" />
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578882083053" />
     <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1578877520439">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578877520439" />
-    <state x="390" y="138" width="755" height="548" key="find.popup" timestamp="1578736057801">
+    <state x="390" y="138" width="755" height="548" key="find.popup" timestamp="1578883810108">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="390" y="138" width="755" height="548" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578736057801" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1578880857530">
+    <state x="390" y="138" width="755" height="548" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578883810108" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1578882362380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1578880857530" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1578882362380" />
   </component>
 </project>

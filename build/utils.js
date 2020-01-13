@@ -47,6 +47,8 @@ exports.cssLoaders = function (options) {
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
+        // css 引用图片打包问题
+        publicPath: '../../',
         fallback: 'vue-style-loader'
       })
     } else {
