@@ -106,7 +106,7 @@
     height: 60px;
     min-width: 600px;
     padding: 5px;
-    background: url('../assets/img/zhi001.png');
+    background: url('../assets/img/zhi001.png')  ;
     position: fixed;
     top: 0px;
     left: 0px;

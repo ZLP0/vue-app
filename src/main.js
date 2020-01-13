@@ -24,20 +24,7 @@ const asyncRouterMap = [
 ]
 router.addRoutes(asyncRouterMap);
 
-// 路由拦截
-router.beforeEach((to, from, next) => {
-  console.log("1111")
-  next();
-/*  if (to.path === '/') {
-    next('/login')
-  }else {
-    next();
-  }*/
 
-
-
-
-})
 
 
 

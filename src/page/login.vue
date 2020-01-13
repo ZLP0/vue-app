@@ -32,7 +32,8 @@
     },
     methods: {
       login() {
-        console.log('登录验证 跳转Home页面')
+        console.log('登录验证 跳转Home页面');
+        sessionStorage.setItem("userInfo","jack")
         this.$router.push('/');
     /*    this.$axios
           .post('/login', {
