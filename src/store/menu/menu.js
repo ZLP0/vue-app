@@ -1,5 +1,5 @@
 const state = {
-  name: '赵路朋',
+  name: '王二',
   items: [
     {
       path: '/', name: '首页', component: 'layout', icon: 'fa-server', noDropdown: true,
