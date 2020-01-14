@@ -10,7 +10,7 @@
       <el-input type="password" v-model="loginForm.password" auto-complete="off" placeholder="密码"></el-input>
     </el-form-item>
 
-    <el-form-item style="width: 100%"   >
+    <el-form-item style="width: 100%">
       <el-button type="primary" style="width: 100%;background: #505458;border: none" v-on:click="login">登录</el-button>
     </el-form-item>
   </el-form>
@@ -33,20 +33,23 @@
     methods: {
       login() {
         console.log('登录验证 跳转Home页面');
-        sessionStorage.setItem("userInfo","jack")
+        sessionStorage.setItem("userInfo", "jack")
         this.$router.push('/');
-    /*    this.$axios
-          .post('/login', {
-            username: this.loginForm.username,
-            password: this.loginForm.password
-          })
-          .then(successResponse => {
-            if (successResponse.data.code === 200) {
-              this.$router.replace({path: '/index'})
-            }
-          })
-          .catch(failResponse => {
-          })*/
+
+        //封装参数
+        let params = new URLSearchParams();
+        params.append('username', this.loginForm.username);
+        params.append('password', this.loginForm.password);
+
+
+       /* this.$axios.post('/login', params).then(successResponse => {
+          console.log('返回信息：' + successResponse)
+        }).catch(failResponse => {
+
+        })*/
+
+
+
       }
     }
   }

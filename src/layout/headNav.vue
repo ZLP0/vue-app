@@ -80,8 +80,10 @@
 
 <style scoped lang='less'>
   .logo-container {
-    line-height: 60px;
+    margin-top: -15px;
+    line-height: 30px;
     min-width: 400px;
+
 
   .logo {
     margin-left: -200px;
@@ -103,10 +105,12 @@
 
   .head-nav {
     width: 100%;
-    height: 60px;
+    height: 30px;
     min-width: 600px;
     padding: 5px;
-    background: url('../assets/img/zhi001.png')  ;
+    background-color: rgb(93, 104, 121);
+    //background: url('../assets/img/zhi001.png')  no-repeat center ;
+    background-size: 1920px auto;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -121,9 +125,10 @@
   }
 
   .userinfo {
-    line-height: 60px;
+    line-height: 30px;
     text-align: right;
     float: right;
+    margin-top: -17px;
   }
 
   .avatar {

@@ -85,7 +85,7 @@
 
   .menu_page {
     position: fixed;
-    top: 70px;
+    top: 40px;
     left: 0;
     min-height: 100%;
     background-color: #324057;
