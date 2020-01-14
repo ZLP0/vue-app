@@ -6,6 +6,7 @@ Vue.use(Router)
 import login from '@/page/login'
 import layout from '@/layout/layout'
 import table from '@/page/table'
+import  echar from '@/page/echar'
 
 const routes = [
   {
@@ -20,6 +21,7 @@ const routes = [
     children: [
       {path: 'login', name: '登录', component: login},
       {path: 'table', name: '表格', component: table},
+      {path: 'echar', name: 'echar', component: echar},
     ]
   }
 ]

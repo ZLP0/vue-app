@@ -18,7 +18,7 @@
               <i :class="'fa-lg fa fa-margin '+item.icon"></i>
               <span slot="title">{{item.name}}</span>
             </template>
-            <router-link v-for="(citem,cindex) in item.children" :to="citem.path"  :key="cindex">
+            <router-link v-for="(citem,cindex) in item.children" :to="citem.path"  :key="index+'_'+cindex">
               <el-menu-item
                 :index='citem.path'>
                 <span slot="title">{{citem.name}}</span>

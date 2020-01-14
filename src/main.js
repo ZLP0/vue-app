@@ -9,23 +9,16 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 //菜单图标库
 import 'font-awesome/css/font-awesome.min.css'
+import  echarts from 'echarts'
 
 Vue.use(ElementUI, {size: 'mini'});
 
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios
+Vue.prototype.$echarts = echarts
 
 
 
-const asyncRouterMap = [
-  {
-    path: '/',
-    name:'',
-    component: require('./layout/layout.vue'),
-    redirect: '/'
-  }
-]
-router.addRoutes(asyncRouterMap);
 
 
 
