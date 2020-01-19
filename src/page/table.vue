@@ -13,6 +13,11 @@
         <el-button type="primary" @click="onSubmit">查询</el-button>
       </el-form-item>
 
+      <el-form-item>
+        <button class="tap"  @click="export2Excel">导出表格</button>
+      </el-form-item>
+
+
       <el-form-item class="btnRight">
         <el-button type="primary" @click="onAdd">添加</el-button>
       </el-form-item>
@@ -20,6 +25,7 @@
 
 
     <el-table
+      id="out-table"
       :data="tableData"
       border
       style="width: 100%">
@@ -42,7 +48,6 @@
     <!--分页-->
     <el-pagination
       @current-change="handelPageChange"
-      page-sizes="10"
       align="left"
       background
       layout="prev, pager, next"
@@ -54,12 +59,11 @@
       title="新增页面"
       :visible.sync="dialogVisible"
       width="50%"
-      :before-close="handleClose"
       :modal-append-to-body="false"
       :close-on-click-modal='false'
       :close-on-press-escape='false'>
       <div>
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-form :model="ruleForm" ref="ruleForm" label-width="100px" class="demo-ruleForm">
           <el-form-item label="活动名称" prop="name">
             <el-input v-model="ruleForm.name"></el-input>
           </el-form-item>
@@ -72,17 +76,19 @@
           <el-form-item label="活动时间" required>
             <el-col :span="11">
               <el-form-item prop="date1">
-                <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1" style="width: 100%;"></el-date-picker>
+                <el-date-picker type="date" placeholder="选择日期" v-model="ruleForm.date1"
+                                style="width: 100%;"></el-date-picker>
               </el-form-item>
             </el-col>
             <el-col class="line" :span="2">-</el-col>
             <el-col :span="11">
               <el-form-item prop="date2">
-                <el-time-picker type="fixed-time" placeholder="选择时间" v-model="ruleForm.date2" style="width: 100%;"></el-time-picker>
+                <el-time-picker type="fixed-time" placeholder="选择时间" v-model="ruleForm.date2"
+                                style="width: 100%;"></el-time-picker>
               </el-form-item>
             </el-col>
           </el-form-item>
-          <el-form-item label="即时配送" prop="delivery"  align="left">
+          <el-form-item label="即时配送" prop="delivery" align="left">
             <el-switch v-model="ruleForm.delivery"></el-switch>
           </el-form-item>
           <el-form-item label="活动性质" prop="type" align="left">
@@ -204,19 +210,45 @@
           date: '2016-05-03',
           name: '王小虎',
           address: '上海市普陀区金沙江路 1518 弄'
-        }]
+        }],
+
+
+
       }
     },
 
     methods: {
       onSubmit() {
-        alert('查询（功能还未完善）')
+        //alert('查询（功能还未完善）')
+
+        this.$axios.post('/queryData').then(data => {
+          this.tableData = data.data;
+        }).catch(failResponse => {
+
+        })
+
+
       },
       onAdd() {
         this.dialogVisible = true;
       },
       handelPageChange(page) {
         alert('查询第' + page + '页')
+      },
+
+      export2Excel() {
+        require.ensure([], () => {
+          const { export_json_to_excel } = require('../excel/Export2Excel');
+          const tHeader = ['姓名', '日期', '地址'];  // 设置Excel的表格第一行的标题
+          const filterVal = ['name', 'date', 'address'];  // index、nickName、name是tableData里对象的属性
+          const list = this.tableData;  //把data里的tableData存到list
+          const data = this.formatJson(filterVal, list);
+          export_json_to_excel(tHeader, data, '导出文件名');  //导出Excel 文件名
+        })
+      },
+
+      formatJson(filterVal, jsonData) {
+        return jsonData.map(v => filterVal.map(j => v[j]))
       }
     }
   }

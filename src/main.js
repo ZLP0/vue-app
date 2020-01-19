@@ -10,12 +10,16 @@ import 'element-ui/lib/theme-chalk/index.css'
 //菜单图标库
 import 'font-awesome/css/font-awesome.min.css'
 import  echarts from 'echarts'
+//excel 组件
+import  './excel/Blob.js'
+import  './excel/Export2Excel.js'
 
 Vue.use(ElementUI, {size: 'mini'});
 
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios
 Vue.prototype.$echarts = echarts
+
 
 
 
