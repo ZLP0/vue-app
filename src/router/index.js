@@ -6,13 +6,20 @@ Vue.use(Router)
 import login from '@/page/login'
 import layout from '@/layout/layout'
 import table from '@/page/table'
-import  echar from '@/page/echar'
+import echar from '@/page/echar'
+import myimages from '@/page/myimages'
+import register from '@/page/register'
 
 const routes = [
   {
     path: '/login',
     name: '登录',
     component: login
+  },
+  {
+    path: '/register',
+    name: '注册',
+    component: register
   },
   {
     path: '/',
@@ -22,6 +29,7 @@ const routes = [
       {path: 'login', name: '登录', component: login},
       {path: 'table', name: '表格', component: table},
       {path: 'echar', name: 'echar', component: echar},
+      {path: 'myimages', name: '照片', component: myimages}
     ]
   }
 ]
@@ -44,7 +52,7 @@ router.beforeEach((to, from, next) => {
 
   console.log('用户信息：' + userinfo)
 
-  if (to.path != '/login') {
+  if (to.path != '/login' && to.path != '/register') {
     //用户 信息为空
     if (!userinfo) {
       //跳转登录页

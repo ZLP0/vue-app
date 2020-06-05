@@ -13,6 +13,12 @@
     <el-form-item style="width: 100%">
       <el-button type="primary" style="width: 100%;background: #505458;border: none" v-on:click="login">登录</el-button>
     </el-form-item>
+
+    <el-form-item style="width: 100%">
+      还没有帐号？
+      <a href="#" type="primary" style="width: 100%; color: red" v-on:click="toRegister">注册</a>
+    </el-form-item>
+
   </el-form>
   </body>
 </template>
@@ -45,12 +51,14 @@
        /* this.$axios.post('/login', params).then(successResponse => {
           console.log('返回信息：' + successResponse)
         }).catch(failResponse => {
-
         })*/
 
-
-
+      },
+      toRegister(){
+        console.log('注册跳转')
+        this.$router.push('/register');
       }
+
     }
   }
 </script>
