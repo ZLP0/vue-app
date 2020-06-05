@@ -96,10 +96,12 @@
 
         this.$axios.post('/register/doregistering', params).then(successResponse => {
           console.dir( successResponse.data.success)
-          //获取验证码成功
+
           if(0==successResponse.data.success){
 
-            this.$router.push('/login');
+
+            sessionStorage.setItem("userInfo", "jack")
+            this.$router.push('/');
 
           }
 
