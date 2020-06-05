@@ -57,7 +57,7 @@
 
 <style>
   #poster {
-    background: url("../assets/img/loginDesk.jpg") no-repeat;
+    background: url("../assets/img/loginDesks.jpg") no-repeat;
     background-position: center;
     height: 100%;
     width: 100%;
