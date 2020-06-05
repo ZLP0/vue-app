@@ -7,7 +7,7 @@ import login from '@/page/login'
 import layout from '@/layout/layout'
 import table from '@/page/table'
 import echar from '@/page/echar'
-import myimages from '@/page/myimages'
+
 import register from '@/page/register'
 
 const routes = [
@@ -28,8 +28,8 @@ const routes = [
     children: [
       {path: 'login', name: '登录', component: login},
       {path: 'table', name: '表格', component: table},
-      {path: 'echar', name: 'echar', component: echar},
-      {path: 'myimages', name: '照片', component: myimages}
+      {path: 'echar', name: 'echar', component: echar}
+
     ]
   }
 ]
