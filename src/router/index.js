@@ -9,6 +9,8 @@ import table from '@/page/table'
 import echar from '@/page/echar'
 
 import register from '@/page/register'
+//修改用户信息
+import userInfo from '@/page/user/userInfo'
 
 const routes = [
   {
@@ -28,7 +30,8 @@ const routes = [
     children: [
       {path: 'login', name: '登录', component: login},
       {path: 'table', name: '表格', component: table},
-      {path: 'echar', name: 'echar', component: echar}
+      {path: 'echar', name: 'echar', component: echar},
+      {path: 'userInfo', name: '用户信息', component: userInfo}
 
     ]
   }

@@ -30,6 +30,8 @@
       </div>
     </el-row>
 
+
+
   </header>
 </template>
 
@@ -39,7 +41,8 @@
     name: 'head-nav',
     data() {
       return {
-        userinfo: this.$store.state.menu.name
+        userinfo: this.$store.state.menu.name,
+        dialogVisible: false  //是否显示 用户对话框
       }
     },
     created() {
@@ -57,6 +60,7 @@
        * @param {string} cmditem 弹框类型
        */
       setDialogInfo(cmditem) {
+
         if (!cmditem) {
           console.log('test');
           this.$message('菜单选项缺少command属性');
@@ -64,6 +68,9 @@
         }
         switch (cmditem) {
           case 'info':
+
+            this.$router.push('/userInfo');
+
           case 'pass':
             this.showInfoList();
             break;
@@ -73,7 +80,13 @@
         }
       },
 
-
+      handleClose(done) {
+        this.$confirm('确认关闭？')
+          .then(_ => {
+            done();
+          })
+          .catch(_ => {});
+      }
     }
   }
 </script>

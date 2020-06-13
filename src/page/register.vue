@@ -85,6 +85,9 @@
       },
 
       register(){
+
+
+
         //封装参数
         let params = new URLSearchParams();
         params.append('email', this.loginForm.email);
