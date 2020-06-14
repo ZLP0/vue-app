@@ -25,7 +25,7 @@ const state = {
   isLoadRoutes: false,
   sidebar: {
     opened: true,
-    width: '180px'
+    width: '200px'
   },
   isCollapse: false,
   isDropname: false, // 用于显示和隐藏二级菜单

@@ -30,7 +30,7 @@
     data() {
       return {
         loginForm: {
-          username: '',
+          username: '大黄蜂',
           password: ''
         },
         responseResult: []
@@ -39,7 +39,10 @@
     methods: {
       login() {
         console.log('登录验证 跳转Home页面');
-        sessionStorage.setItem("userInfo", "jack")
+        //用户信息存储在 session中 用于登录拦截（判断是否已登录）
+        sessionStorage.setItem("userInfo", this.loginForm.username);
+        //将用户名存储在 store中 主页用来显示用户名
+        this.$store.state.user.userinfo=this.loginForm.username;
         this.$router.push('/');
 
         //封装参数

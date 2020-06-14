@@ -41,7 +41,7 @@
     name: 'head-nav',
     data() {
       return {
-        userinfo: this.$store.state.menu.name,
+        userinfo: this.$store.state.user.userinfo,
         dialogVisible: false  //是否显示 用户对话框
       }
     },
