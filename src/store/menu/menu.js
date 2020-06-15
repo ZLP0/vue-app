@@ -19,6 +19,12 @@ const state = {
         {path: '/echar', name: 'echar', component: 'table'},
       ]
     },
+    {
+      path: '/edit', name: '富文本', component: 'edit', icon: 'fa-envelope', noDropdown: true,
+      children: [
+        {path: '/edit', name: '富文本', component: 'edit'},
+      ]
+    },
 
 
   ],
