@@ -1,8 +1,6 @@
 
 <template>
-  <EditorBar :catchData="catchData" :content="form.content"></EditorBar>
-
-
+  <EditorBar :catchData="catchData" :content="form.content" :rangenum="rangenum"></EditorBar>
 </template>
 
 <script>
@@ -22,6 +20,8 @@
     methods: {
       //编辑器的内容赋值
       catchData(content) {
+        let currentRange = window.getSelection().getRangeAt(0);
+        this.rangenum = currentRange;
         this.form.content = content;
       }
     },

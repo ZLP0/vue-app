@@ -19,7 +19,11 @@
     props: ['catchData', 'content'],    // 接收父组件的方法
     watch: {
       content() {
-        this.editor.txt.html(this.content)
+        // console.log("没有光标则执行，有光标不执行，回显--解决输入时光标老跳到最底部", this.content, this.rangenum)
+        if (null == this.rangenum) {
+           this.content.setRange(this.rangenum)
+          this.editor.txt.html(this.content)
+        }
       }
     },
 
@@ -29,8 +33,8 @@
         this.editorContent = html
         this.catchData(this.editorContent)  // 把这个html通过catchData的方法传入父组件
       },
-      //去掉插入网络图片
-      this.editor.customConfig.showLinkImg = false
+        //去掉插入网络图片
+        this.editor.customConfig.showLinkImg = false
       //粘贴来的内容过滤图片
       this.editor.customConfig.pasteIgnoreImg = true
       this.editor.customConfig.menus = [          // 菜单配置
@@ -72,8 +76,9 @@
           //添加请求头
           headers: {"Content-Type": "multipart/form-data"},
         };
+        var uploadUrl = "upload/img"
         axios
-          .post("uploadUrl", formData, config)
+          .post(uploadUrl, formData, config)
           .then(res => {
             //todo 图片上传如何存储,具体要看上传接口返回的结果
             insert(res.data)
