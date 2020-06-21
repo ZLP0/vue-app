@@ -1,6 +1,8 @@
 
 <template>
-  <EditorBar :catchData="catchData" :content="form.content" :rangenum="rangenum"></EditorBar>
+  <div>
+    <EditorBar :catchData="catchData" :content="form.content" :rangenum="rangenum"></EditorBar>
+  </div>
 </template>
 
 <script>

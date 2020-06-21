@@ -9,7 +9,8 @@
         :collapse="isCollapse"
         background-color="#324057"
         text-color="#fff"
-        active-text-color="#ff6428">
+        active-text-color="#ff6428"
+        @open="handleOpen" @close="handleClose"  >
         <template v-for="(item,index) in lefeMenuList">
 
           <!--表示 有二级菜单 -->
@@ -74,6 +75,12 @@
     methods: {
       showDropdown() {
         this.isDropdown = this.$store.state.menu.isCollapse;
+      },
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
       }
     }
   };
@@ -105,9 +112,9 @@
     min-width: 180px;
   }
   .el-menu {
-  .el-menu-item {
-    padding-left: 40px !important;
-  }
+    .el-menu-item {
+      padding-left: 40px !important;
+    }
   }
 
   .hiddenDropdown,
@@ -115,10 +122,10 @@
     display: none;
   }
   .router-link-active {
-  li {
-  .el-submenu__title{
-    color: #ff6428 !important;
-  }
-  }
+    li {
+      .el-submenu__title{
+        color: #ff6428 !important;
+      }
+    }
   }
 </style>

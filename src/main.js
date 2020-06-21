@@ -14,6 +14,7 @@ import  echarts from 'echarts'
 import  './excel/Blob.js'
 import  './excel/Export2Excel.js'
 
+
 Vue.use(ElementUI, {size: 'mini'});
 
 Vue.config.productionTip = false;

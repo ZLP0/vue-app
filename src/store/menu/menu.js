@@ -2,10 +2,7 @@ const state = {
   name: '王二',
   items: [
     {
-      path: '/', name: '首页', component: 'layout', icon: 'fa-server', noDropdown: true,
-      children: [
-        {path: '/', name: '首页', component: 'layout'},
-      ]
+      path: '/', name: '首页', component: 'layout', icon: 'fa-server', noDropdown: true
     },
     {
       path: '/table', name: '表格', component: 'userList', icon: 'fa-user', noDropdown: false,
@@ -14,16 +11,10 @@ const state = {
       ]
     },
     {
-      path: '/echar', name: 'echar', component: 'echar', icon: 'fa-envelope', noDropdown: true,
-      children: [
-        {path: '/echar', name: 'echar', component: 'table'},
-      ]
+      path: '/echar', name: 'echar', component: 'echar', icon: 'fa-envelope', noDropdown: true
     },
     {
-      path: '/edit', name: '富文本', component: 'edit', icon: 'fa-envelope', noDropdown: true,
-      children: [
-        {path: '/edit', name: '富文本', component: 'edit'},
-      ]
+      path: '/edit', name: '富文本', component: 'edit', icon: 'fa-envelope', noDropdown: true
     },
 
 
