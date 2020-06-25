@@ -22,7 +22,7 @@
         <el-button type="primary" v-on:click="getcode">获取验证码</el-button>
       </el-col>
       <el-col :span="9">
-        <span >{{timer}}</span>
+        <span>{{timer}}</span>
       </el-col>
     </el-form-item>
 
@@ -45,7 +45,7 @@
           email: '2323436652@qq.com',
           password: '',
           passwords: '',
-          code:''
+          code: ''
         },
         responseResult: []
       }
@@ -57,11 +57,11 @@
         let params = new URLSearchParams();
         params.append('email', this.loginForm.email);
         this.$axios.post('/register/sendVerificationCode', params).then(successResponse => {
-          console.dir( successResponse.data.success)
+          console.dir(successResponse.data.success)
           //获取验证码成功
-          if(0==successResponse.data.success){
+          if (0 == successResponse.data.success) {
 
-              this.countSub();
+            this.countSub();
 
           }
 
@@ -75,17 +75,16 @@
         var num = 120;
         var t = setInterval(() => {
           num--;
-          this.timer = num+"s"
+          this.timer = num + "s"
           if (num == 0) {
-            this.timer='验证码已过期'
+            this.timer = '验证码已过期'
             clearInterval(t);
           }
         }, 1000);
 
       },
 
-      register(){
-
+      register() {
 
 
         //封装参数
@@ -96,11 +95,10 @@
         params.append('code', this.loginForm.code);
 
 
-
         this.$axios.post('/register/doregistering', params).then(successResponse => {
-          console.dir( successResponse.data.success)
+          console.dir(successResponse.data.success)
 
-          if(0==successResponse.data.success){
+          if (0 == successResponse.data.success) {
 
 
             sessionStorage.setItem("userInfo", "jack")

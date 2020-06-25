@@ -14,7 +14,7 @@
       </el-form-item>
 
       <el-form-item>
-        <button class="tap"  @click="export2Excel">导出表格</button>
+        <button class="tap" @click="export2Excel">导出表格</button>
       </el-form-item>
 
 
@@ -213,7 +213,6 @@
         }],
 
 
-
       }
     },
 
@@ -238,7 +237,7 @@
 
       export2Excel() {
         require.ensure([], () => {
-          const { export_json_to_excel } = require('../excel/Export2Excel');
+          const {export_json_to_excel} = require('../excel/Export2Excel');
           const tHeader = ['姓名', '日期', '地址'];  // 设置Excel的表格第一行的标题
           const filterVal = ['name', 'date', 'address'];  // index、nickName、name是tableData里对象的属性
           const list = this.tableData;  //把data里的tableData存到list

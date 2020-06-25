@@ -10,16 +10,17 @@
         background-color="#324057"
         text-color="#fff"
         active-text-color="#ff6428"
-        @open="handleOpen" @close="handleClose"  >
+        @open="handleOpen" @close="handleClose">
         <template v-for="(item,index) in lefeMenuList">
 
           <!--表示 有二级菜单 -->
-          <el-submenu style="text-align: left" v-if="item.children  && item.children.length > 0 && !item.noDropdown"  :index="item.path" :key="index">
+          <el-submenu style="text-align: left" v-if="item.children  && item.children.length > 0 && !item.noDropdown"
+                      :index="item.path" :key="index">
             <template slot="title">
               <i :class="'fa-lg fa fa-margin '+item.icon"></i>
               <span slot="title">{{item.name}}</span>
             </template>
-            <router-link v-for="(citem,cindex) in item.children" :to="citem.path"  :key="index+'_'+cindex">
+            <router-link v-for="(citem,cindex) in item.children" :to="citem.path" :key="index+'_'+cindex">
               <el-menu-item
                 :index='citem.path'>
                 <span slot="title">{{citem.name}}</span>
@@ -34,7 +35,7 @@
                         v-if="item.noDropdown"
                         :index="item.path"
             >
-              <template   slot="title" >
+              <template slot="title">
                 <i :class="'fa fa-margin  '+item.icon"></i>
                 <span class="23">{{item.name}}</span>
               </template>
@@ -57,19 +58,19 @@
         isDropdown: false
       };
     },
-    computed:{
-      lefeMenuList(){
+    computed: {
+      lefeMenuList() {
         console.log(this.$store.state.menu.items)
         return this.$store.state.menu.items;
       },
-      isDropname(){  // false
+      isDropname() {  // false
         return this.$store.state.menu.isDropname;
       },
-      isCollapse(){
+      isCollapse() {
         return this.$store.state.menu.isCollapse;
       }
     },
-    created(){
+    created() {
       console.log(this.$store.state.menu.items);
     },
     methods: {
@@ -98,19 +99,24 @@
     background-color: #324057;
     z-index: 99;
   }
+
   .fa-margin {
     margin-right: 5px;
   }
+
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 180px;
     min-height: 400px;
   }
+
   .el-menu-vertical-demo {
     width: 35px;
   }
+
   .el-submenu .el-menu-item {
     min-width: 180px;
   }
+
   .el-menu {
     .el-menu-item {
       padding-left: 40px !important;
@@ -121,9 +127,10 @@
   .hiddenDropname {
     display: none;
   }
+
   .router-link-active {
     li {
-      .el-submenu__title{
+      .el-submenu__title {
         color: #ff6428 !important;
       }
     }

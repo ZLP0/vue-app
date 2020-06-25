@@ -5,13 +5,12 @@ Vue.use(Vuex)
 
 
 import menu from './menu'
-import  page from './page'
-import  user from './user'
-
+import page from './page'
+import user from './user'
 
 
 export default new Vuex.Store({
   modules: {
-    menu,page,user
+    menu, page, user
   }
 });

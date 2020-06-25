@@ -12,7 +12,8 @@ import register from '@/page/register'
 //修改用户信息
 import userInfo from '@/page/user/userInfo'
 // 富文本 页面
-import edit  from  '@/page/edit'
+import edit from '@/page/edit'
+
 const routes = [
   {
     path: '/login',

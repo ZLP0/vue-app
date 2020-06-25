@@ -2,7 +2,7 @@
   <header class="head-nav" id='header_container'>
     <el-row style="margin:0 10px;">
       <el-col :span="6" class='logo-container'>
-        <img src="../assets/img/logo.png" class='logo' alt="">
+        <img src="../assets/img/logo.gif" class='logo' alt="">
         <span class='title'>飞翔小码</span>
       </el-col>
 
@@ -29,7 +29,6 @@
         <i class="fa fa-sign-out logout" @click='logout'></i>
       </div>
     </el-row>
-
 
 
   </header>
@@ -85,7 +84,8 @@
           .then(_ => {
             done();
           })
-          .catch(_ => {});
+          .catch(_ => {
+          });
       }
     }
   }
@@ -98,21 +98,21 @@
     min-width: 400px;
 
 
-  .logo {
-    margin-left: -200px;
-    height: 50px;
-    width: 50px;
-    margin-right: 5px;
-    vertical-align: middle;
-    display: inline-block;
-  }
+    .logo {
+      margin-left: -200px;
+      height: 50px;
+      width: 50px;
+      margin-right: 5px;
+      vertical-align: middle;
+      display: inline-block;
+    }
 
-  .title {
-    vertical-align: middle;
-    font-size: 22px;
-    font-family: cursive;
-    letter-spacing: 3px;
-  }
+    .title {
+      vertical-align: middle;
+      font-size: 22px;
+      font-family: cursive;
+      letter-spacing: 3px;
+    }
 
   }
 
@@ -130,10 +130,10 @@
     z-index: 100;
     color: #FFF;
 
-  .logout {
-    vertical-align: middle;
-    cursor: pointer;
-  }
+    .logout {
+      vertical-align: middle;
+      cursor: pointer;
+    }
 
   }
 
@@ -158,22 +158,22 @@
     vertical-align: middle;
     padding: 0 5px;
 
-  .name {
-    line-height: 20px;
-    text-align: center;
-    font-size: 14px;
-  }
+    .name {
+      line-height: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
 
-  .comename {
-    font-size: 12px;
-  }
+    .comename {
+      font-size: 12px;
+    }
 
-  .avatarname {
-    font-size: 13px;
-    color: #a9d86e;
-    font-weight: bolder;
-    margin-top: -10px;
-  }
+    .avatarname {
+      font-size: 13px;
+      color: #a9d86e;
+      font-weight: bolder;
+      margin-top: -10px;
+    }
 
   }
 
@@ -181,9 +181,9 @@
     cursor: pointer;
     margin-right: 5px;
 
-  .el-dropdown {
-    color: #FFF;
-  }
+    .el-dropdown {
+      color: #FFF;
+    }
 
   }
 

@@ -21,7 +21,7 @@
       content() {
         // console.log("没有光标则执行，有光标不执行，回显--解决输入时光标老跳到最底部", this.content, this.rangenum)
         if (null == this.rangenum) {
-           this.content.setRange(this.rangenum)
+          this.content.setRange(this.rangenum)
           this.editor.txt.html(this.content)
         }
       }
@@ -51,13 +51,16 @@
         'list',  // 列表
         'justify',  // 对齐方式
         'quote',  // 引用
-         'emoticon',  // 表情
+        'emoticon',  // 表情
         'image',  // 插入图片
         // 'table',  // 表格
         'code',  // 插入代码
         'undo',  // 撤销
         'redo'  // 重复
       ]
+      //-- 上传图片两种方式   1：uploadImgShowBase64使用64上传
+      //--                    2：customUploadImg ：直接上传后台 返回图片链接地址
+       //this.editor.customConfig.uploadImgShowBase64 = true
       // 下面是最重要的的方法
       // this.editor.customConfig.withCredentials = true
       // 将图片大小限制为 5M

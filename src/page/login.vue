@@ -42,7 +42,7 @@
         //用户信息存储在 session中 用于登录拦截（判断是否已登录）
         sessionStorage.setItem("userInfo", this.loginForm.username);
         //将用户名存储在 store中 主页用来显示用户名
-        this.$store.state.user.userinfo=this.loginForm.username;
+        this.$store.state.user.userinfo = this.loginForm.username;
         this.$router.push('/');
 
         //封装参数
@@ -51,13 +51,13 @@
         params.append('password', this.loginForm.password);
 
 
-       /* this.$axios.post('/login', params).then(successResponse => {
-          console.log('返回信息：' + successResponse)
-        }).catch(failResponse => {
-        })*/
+        /* this.$axios.post('/login', params).then(successResponse => {
+           console.log('返回信息：' + successResponse)
+         }).catch(failResponse => {
+         })*/
 
       },
-      toRegister(){
+      toRegister() {
         console.log('注册跳转')
         this.$router.push('/register');
       }

@@ -9,8 +9,8 @@
     </el-form-item>
 
     <el-form-item>
-      <el-col class="line" :span="1">
-        头像
+      <el-col class="line" :span="2">
+        更改头像
       </el-col>
 
       <el-col class="line" :span="4">
@@ -57,7 +57,6 @@
 
         }).catch(res => {
         })
-
 
 
       },
