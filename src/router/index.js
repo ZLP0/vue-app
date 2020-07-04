@@ -13,6 +13,7 @@ import register from '@/page/register'
 import userInfo from '@/page/user/userInfo'
 // 富文本 页面
 import edit from '@/page/edit'
+import  homePay from '@/page/homePay'
 
 const routes = [
   {
@@ -34,7 +35,9 @@ const routes = [
       {path: 'table', name: '表格', component: table},
       {path: 'echar', name: 'echar', component: echar},
       {path: 'userInfo', name: '用户信息', component: userInfo},
-      {path: 'edit', name: '富文本', component: edit}
+      {path: 'edit', name: '富文本', component: edit},
+      {path: 'homePay', name: '支付', component: homePay},
+
 
     ]
   }

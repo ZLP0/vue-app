@@ -14,7 +14,7 @@
       </el-form-item>
 
       <el-form-item>
-        <button class="tap" @click="export2Excel">导出表格</button>
+        <el-button class="tap" @click="export2Excel">导出表格</el-button>
       </el-form-item>
 
 

@@ -1,18 +1,14 @@
 <template>
-  <el-form>
+  <el-form label-position='right' label-width="80px">
 
 
-    <el-form-item>
+    <el-form-item label="网名">
       <el-col class="line" :span="10">
         <el-input type="text" v-model="userName" auto-complete="off" placeholder="网名"></el-input>
       </el-col>
     </el-form-item>
 
-    <el-form-item>
-      <el-col class="line" :span="2">
-        更改头像
-      </el-col>
-
+    <el-form-item label="更改头像">
       <el-col class="line" :span="4">
         <el-upload
           class="avatar-uploader"

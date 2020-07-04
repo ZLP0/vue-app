@@ -20,7 +20,7 @@
       }
     },
     methods: {
-      getContent(){
+      getContent() {
         alert(this.form.content);
 
       },

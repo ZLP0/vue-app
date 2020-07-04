@@ -60,7 +60,7 @@
       ]
       //-- 上传图片两种方式   1：uploadImgShowBase64使用64上传
       //--                    2：customUploadImg ：直接上传后台 返回图片链接地址
-       //this.editor.customConfig.uploadImgShowBase64 = true
+      //this.editor.customConfig.uploadImgShowBase64 = true
       // 下面是最重要的的方法
       // this.editor.customConfig.withCredentials = true
       // 将图片大小限制为 5M

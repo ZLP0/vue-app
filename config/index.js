@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/': {    //  1: ‘/’ : 访问url '/login'    2: '/api' : 访问url '/api/login'
-        target: 'http://localhost:8089',// 后台跨域地址
+        target: 'http://182.92.97.65:8089',// 后台跨域地址
         changeOrigin: true, //允许跨域
         pathRewrite: {
           '^/api': '/'

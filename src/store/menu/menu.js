@@ -16,6 +16,9 @@ const state = {
     {
       path: '/edit', name: '富文本', component: 'edit', icon: 'fa-envelope', noDropdown: true
     },
+    {
+      path: '/homePay', name: '支付', component: 'homePay', icon: 'fa-server', noDropdown: true
+    },
 
 
   ],

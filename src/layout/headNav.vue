@@ -7,6 +7,10 @@
       </el-col>
 
       <div class="userinfo">
+        <router-link to="homePay">
+          <a   style="color: red">去赞助</a>
+        </router-link>
+
         <img src="../assets/img/xiaoma.jpg" class='avatar' alt="">
         <div class='welcome'>
           <p class='name comename'>欢迎</p>
@@ -86,7 +90,8 @@
           })
           .catch(_ => {
           });
-      }
+      },
+
     }
   }
 </script>
