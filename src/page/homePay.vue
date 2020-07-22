@@ -110,7 +110,7 @@
         params.append('payType', 'ALIPAY_PC');
         params.append('orderId', orderId);
         params.append('amount', '6.6');
-        this.$axios.post('/pay', params).then(successResponse => {
+        this.$axios.post('/api/pay', params).then(successResponse => {
           document.getElementById('pay').innerHTML = successResponse.data.body;//此处form就是后台返回接收到的数据
 
           document.forms[0].target = "_blank";//打开新标签页
@@ -126,7 +126,7 @@
         params.append('payType', 'WXPAY_NATIVE');
         params.append('orderId', orderId);
         params.append('amount', '0.01');
-        this.$axios.post('/pay', params).then(successResponse => {
+        this.$axios.post('/api/pay', params).then(successResponse => {
           this.wx = '请扫码支付'
           //生成二维码
           this.config.text = successResponse.data.codeUrl;
