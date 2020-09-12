@@ -19,7 +19,7 @@
 
 
       <el-form-item class="btnRight">
-        <el-button type="primary" @click="onAdd">添加</el-button>
+        <el-button style="margin-right: 30px" type="primary" @click="onAdd">新增</el-button>
       </el-form-item>
     </el-form>
 
@@ -42,6 +42,11 @@
       <el-table-column
         prop="address"
         label="地址">
+      </el-table-column>
+      <el-table-column label="操作" width="160">
+        <template slot-scope="scope">
+          <el-button size="mini" type="primary" plain @click = "showIndex(scope)">点击显示当前行下标</el-button>
+        </template>
       </el-table-column>
     </el-table>
 
@@ -248,6 +253,10 @@
 
       formatJson(filterVal, jsonData) {
         return jsonData.map(v => filterVal.map(j => v[j]))
+      },
+      showIndex(obj)
+      {
+        alert(obj.row.name)
       }
     }
   }
