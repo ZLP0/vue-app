@@ -45,7 +45,7 @@
       </el-table-column>
       <el-table-column label="操作" width="160">
         <template slot-scope="scope">
-          <el-button size="mini" type="primary" plain @click = "showIndex(scope)">点击显示当前行下标</el-button>
+          <el-button size="mini" type="primary" plain @click="showIndex(scope)">点击显示当前行下标</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -127,137 +127,133 @@
 
 
 <style>
-  .btnRight {
-    float: right;
-    margin-right: 0px !important;
-  }
+.btnRight {
+  float: right;
+  margin-right: 0px !important;
+}
 
-  .el-table .warning-row {
-    background: oldlace;
-  }
+.el-table .warning-row {
+  background: oldlace;
+}
 
-  .el-table .success-row {
-    background: #f0f9eb;
-  }
+.el-table .success-row {
+  background: #f0f9eb;
+}
 </style>
 
 <script>
 
 
-  export default {
-    data() {
-      return {
-        ruleForm: {
-          name: '',
-          region: '',
-          date1: '',
-          date2: '',
-          delivery: false,
-          type: [],
-          resource: '',
-          desc: ''
-        },
+export default {
+  data() {
+    return {
+      ruleForm: {
+        name: '',
+        region: '',
+        date1: '',
+        date2: '',
+        delivery: false,
+        type: [],
+        resource: '',
+        desc: ''
+      },
 
-        dialogVisible: false,
-        formInline: {
-          name: '',
-          address: ''
-        },
-        tableData: [{
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }],
+      dialogVisible: false,
+      formInline: {
+        name: '',
+        address: ''
+      },
+      tableData: [{
+        date: '2016-05-02',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        date: '2016-05-04',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-04',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-04',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-04',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄',
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }],
 
 
-      }
+    }
+  },
+
+  methods: {
+    onSubmit() {
+      //alert('查询（功能还未完善）')
+      this.$axios.post('/queryData').then(data => {
+        this.tableData = data.data;
+      }).catch(failResponse => {
+
+      })
+    },
+    onAdd() {
+      this.dialogVisible = true;
+    },
+    handelPageChange(page) {
+      //alert('查询第' + page + '页')
     },
 
-    methods: {
-      onSubmit() {
-        //alert('查询（功能还未完善）')
+    export2Excel() {
+      require.ensure([], () => {
+        const {export_json_to_excel} = require('../excel/Export2Excel');
+        const tHeader = ['姓名', '日期', '地址'];  // 设置Excel的表格第一行的标题
+        const filterVal = ['name', 'date', 'address'];  // index、nickName、name是tableData里对象的属性
+        const list = this.tableData;  //把data里的tableData存到list
+        const data = this.formatJson(filterVal, list);
+        export_json_to_excel(tHeader, data, '导出文件名');  //导出Excel 文件名
+      })
+    },
 
-        this.$axios.post('/queryData').then(data => {
-          this.tableData = data.data;
-        }).catch(failResponse => {
-
-        })
-
-
-      },
-      onAdd() {
-        this.dialogVisible = true;
-      },
-      handelPageChange(page) {
-        alert('查询第' + page + '页')
-      },
-
-      export2Excel() {
-        require.ensure([], () => {
-          const {export_json_to_excel} = require('../excel/Export2Excel');
-          const tHeader = ['姓名', '日期', '地址'];  // 设置Excel的表格第一行的标题
-          const filterVal = ['name', 'date', 'address'];  // index、nickName、name是tableData里对象的属性
-          const list = this.tableData;  //把data里的tableData存到list
-          const data = this.formatJson(filterVal, list);
-          export_json_to_excel(tHeader, data, '导出文件名');  //导出Excel 文件名
-        })
-      },
-
-      formatJson(filterVal, jsonData) {
-        return jsonData.map(v => filterVal.map(j => v[j]))
-      },
-      showIndex(obj)
-      {
-        alert(obj.row.name)
-      }
+    formatJson(filterVal, jsonData) {
+      return jsonData.map(v => filterVal.map(j => v[j]))
+    },
+    showIndex(obj) {
+      alert(obj.row.name)
     }
   }
+}
 </script>
